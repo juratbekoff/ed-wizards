@@ -11,12 +11,12 @@ export const navbarItems = [
     },
     {
         id: 3,
-        path: "/useful-sources",
+        path: "/sources",
         name: "Useful sources"
     },
     {
         id: 4,
-        path: "/our-team",
+        path: "/team",
         name: "Our Team"
     },
     {

@@ -18,11 +18,11 @@ const Home = () => {
 
                         <div className={"grid grid-cols-3 gap-4 pb-3 max-xl:grid-cols-1"}>
                             <StatsCard icon={"https://robocontest.uz/assets/icons/programming/009-programmer.png"}
-                                       label={"Lessons"} amount={185}/>
+                                       label={"Lessons"} amount={5}/>
                             <StatsCard icon={"https://robocontest.uz/assets/icons/programming/029-coding.png"}
                                        label={"Sources"} amount={185}/>
                             <StatsCard icon={"https://robocontest.uz/assets/icons/programming/005-group.png"}
-                                       label={"Students"} amount={185}/>
+                                       label={"Students"} amount={50}/>
                         </div>
                     </div>
 
@@ -92,11 +92,10 @@ const Home = () => {
                 </div>
 
                 <div className={"grid grid-cols-4 gap-5 max-xl:grid-cols-2 max-lg:gap-3 max-lg:grid-cols-1"}>
-                    <TestimonialsCard/>
-                    <TestimonialsCard/>
-                    <TestimonialsCard/>
-                    <TestimonialsCard/>
-
+                    <TestimonialsCard author={"John Doe"} feedback={"I like this and this and this!"}/>
+                    <TestimonialsCard author={"John Doe"} feedback={"I like this and this and this!"}/>
+                    <TestimonialsCard author={"John Doe"} feedback={"I like this and this and this!"}/>
+                    <TestimonialsCard author={"John Doe"} feedback={"I like this and this and this!"}/>
                 </div>
             </div>
 

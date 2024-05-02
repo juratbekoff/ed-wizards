@@ -8,7 +8,7 @@ const MainLayout = () => {
                 <Navbar/>
             </div>
 
-            <div className={"px-14 max-lg:px-8 mt-5 container mx-auto pb-5"}>
+            <div className={"px-14 max-lg:px-8 mt-5 container mx-auto pb-5 flex flex-col gap-5"}>
                 <Outlet/>
             </div>
         </div>
