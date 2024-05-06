@@ -1,4 +1,5 @@
 import {SourcesCard} from "../components/cards";
+import {sourcesData} from "../static";
 
 const Sources = () => {
     return (
@@ -11,10 +12,11 @@ const Sources = () => {
 
             {/* Sources card*/}
             <div className={"grid grid-cols-1 gap-2"}>
-                <SourcesCard title={"The 37 Greatest Math Quotes of All Time"} createdAt={"20.08.2024"}/>
-                <SourcesCard title={"The 37 Greatest Math Quotes of All Time"} createdAt={"20.08.2024"}/>
-                <SourcesCard title={"The 37 Greatest Math Quotes of All Time"} createdAt={"20.08.2024"}/>
-                <SourcesCard title={"The 37 Greatest Math Quotes of All Time"} createdAt={"20.08.2024"}/>
+                {
+                    sourcesData.map(source => (
+                        <SourcesCard key={source.id} title={source.text} createdAt={source.date} url={source.url}/>
+                    ))
+                }
             </div>
         </>
     );

@@ -6,7 +6,7 @@ const LessonsCard = ({image_url, video_url}: { image_url: string, video_url: str
         <Link
             to={video_url}
             target={"_blank"}
-            className={"bg-white p-2 rounded-md shadow-sm h-[180px] bg-cover bg-center flex justify-center items-center cursor-pointer"}
+            className={"bg-white p-2 rounded-md shadow h-[180px] bg-cover bg-center flex justify-center items-center cursor-pointer"}
             style={{backgroundImage: `url(${image_url})`}}>
             <div
                 className={"w-9 h-9 flex justify-center items-center rounded-full bg-gray-100"}>

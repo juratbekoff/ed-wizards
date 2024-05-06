@@ -12,7 +12,7 @@ const Contact = () => {
                 <div className={"bg-[#38B7BC] h-[1px] w-1/6"}></div>
             </div>
 
-            <div className={"bg-white h-60 p-8 space-y-2 max-lg:space-y-4"}>
+            <div className={"bg-white h-60 p-8 space-y-2 max-lg:space-y-4 max-md:text-sm"}>
                 {/* Phone */}
                 <div className={"flex gap-3"}>
                     <div className={"flex items-center gap-1"}>
@@ -34,7 +34,7 @@ const Contact = () => {
                     <div className={"flex items-center gap-1 -ml-[2px]"}>
                         <MdAlternateEmail className="text-orange-600 text-xl"/>
                     </div>
-                    <h1>ed.wizards@gmail.com</h1>
+                    <h1>educationwizardsfficial@gmail.com</h1>
                 </div>
 
 

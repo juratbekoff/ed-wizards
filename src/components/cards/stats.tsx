@@ -1,7 +1,7 @@
 type StatsCardProps = {
     icon: string
     label: string
-    amount: number
+    amount: number | string
 }
 
 const StatsCards = (data: StatsCardProps) => {

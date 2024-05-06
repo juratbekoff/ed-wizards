@@ -1,14 +1,15 @@
 import {LessonsCard, SourcesCard, StatsCard, TestimonialsCard} from "../components/cards";
 import {Link} from "react-router-dom";
+import {lessonsData, sourcesData, testimonialsData} from "../static";
 
 const Home = () => {
     return (
         <div className={"flex flex-col gap-5"}>
 
             {/* Banner */}
-            <div className={"w-full flex gap-5 max-2xl:flex-col"}>
+            <div className={"w-full flex gap-5 max-xl:flex-col"}>
                 <img src="/banner-image.png" alt="image not laoded"
-                     className={"h-[500px] max-lg:h-[350px] max-md:h-[200px]  rounded-md "}/>
+                     className={"h-[450px] max-lg:h-[350px] max-md:h-[180px]  rounded-md "}/>
 
                 <div className={"flex flex-col gap-5 w-full"}>
 
@@ -20,9 +21,9 @@ const Home = () => {
                             <StatsCard icon={"https://robocontest.uz/assets/icons/programming/009-programmer.png"}
                                        label={"Lessons"} amount={5}/>
                             <StatsCard icon={"https://robocontest.uz/assets/icons/programming/029-coding.png"}
-                                       label={"Sources"} amount={185}/>
+                                       label={"Sources"} amount={5}/>
                             <StatsCard icon={"https://robocontest.uz/assets/icons/programming/005-group.png"}
-                                       label={"Students"} amount={50}/>
+                                       label={"Students"} amount={"50+"}/>
                         </div>
                     </div>
 
@@ -46,18 +47,14 @@ const Home = () => {
                 </div>
 
                 <div className={"grid grid-cols-4 gap-5 max-lg:grid-cols-2 max-md:grid-cols-1"}>
-                    <LessonsCard
-                        image_url={"https://cdn1.byjus.com/wp-content/uploads/2018/11/maths/2016/06/07120628/Algebra1.png"}
-                        video_url={"https://robocontest.uz/assets/icons/programming/009-programmer.png"}/>
-                    <LessonsCard
-                        image_url={"https://cdn1.byjus.com/wp-content/uploads/2018/11/maths/2016/06/07120628/Algebra1.png"}
-                        video_url={"https://robocontest.uz/assets/icons/programming/009-programmer.png"}/>
-                    <LessonsCard
-                        image_url={"https://cdn1.byjus.com/wp-content/uploads/2018/11/maths/2016/06/07120628/Algebra1.png"}
-                        video_url={"https://robocontest.uz/assets/icons/programming/009-programmer.png"}/>
-                    <LessonsCard
-                        image_url={"https://cdn1.byjus.com/wp-content/uploads/2018/11/maths/2016/06/07120628/Algebra1.png"}
-                        video_url={"https://robocontest.uz/assets/icons/programming/009-programmer.png"}/>
+                    {
+                        lessonsData.filter(lesson => lesson.id < 5).map(lesson => (
+                            <LessonsCard
+                                key={lesson.id}
+                                image_url={lesson.cover_image}
+                                video_url={lesson.video_url}/>
+                        ))
+                    }
                 </div>
             </div>
 
@@ -66,17 +63,18 @@ const Home = () => {
                 <div className={"flex flex-col gap-1"}>
                     <div className={"font-medium flex justify-between items-center"}>
                         <h1 className={"text-2xl max-lg:text-xl"}>* Useful sources</h1>
-                        <Link to={'/useful-sources'} className={"text-sm text-gray-500"}>See all</Link>
+                        <Link to={'/sources'} className={"text-sm text-gray-500"}>See all</Link>
                     </div>
 
                     <div className={"bg-[#38B7BC] h-[0.5px] w-1/6"}></div>
                 </div>
 
                 <div className={"grid grid-cols-1 gap-2"}>
-                    <SourcesCard title={"The 37 Greatest Math Quotes of All Time"} createdAt={"20.08.2024"}/>
-                    <SourcesCard title={"The 37 Greatest Math Quotes of All Time"} createdAt={"20.08.2024"}/>
-                    <SourcesCard title={"The 37 Greatest Math Quotes of All Time"} createdAt={"20.08.2024"}/>
-                    <SourcesCard title={"The 37 Greatest Math Quotes of All Time"} createdAt={"20.08.2024"}/>
+                    {
+                        sourcesData.filter(source => source.id < 5).map(source => (
+                            <SourcesCard key={source.id} title={source.text} createdAt={source.date} url={source.url}/>
+                        ))
+                    }
                 </div>
             </div>
 
@@ -92,10 +90,12 @@ const Home = () => {
                 </div>
 
                 <div className={"grid grid-cols-4 gap-5 max-xl:grid-cols-2 max-lg:gap-3 max-lg:grid-cols-1"}>
-                    <TestimonialsCard author={"John Doe"} feedback={"I like this and this and this!"}/>
-                    <TestimonialsCard author={"John Doe"} feedback={"I like this and this and this!"}/>
-                    <TestimonialsCard author={"John Doe"} feedback={"I like this and this and this!"}/>
-                    <TestimonialsCard author={"John Doe"} feedback={"I like this and this and this!"}/>
+                    {
+                        testimonialsData.filter(testimonial => testimonial.id < 5).map(testimonial => (
+                            <TestimonialsCard key={testimonial.id} author={testimonial.author}
+                                              feedback={testimonial.text}/>
+                        ))
+                    }
                 </div>
             </div>
 

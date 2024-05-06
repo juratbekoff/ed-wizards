@@ -1,4 +1,5 @@
 import {LessonsCard} from "../components/cards";
+import {lessonsData} from "../static";
 
 const Lessons = () => {
     return (
@@ -11,18 +12,14 @@ const Lessons = () => {
 
             {/* Lessons card*/}
             <div className={"grid grid-cols-4 gap-5 max-lg:grid-cols-2 max-md:grid-cols-1"}>
-                <LessonsCard
-                    image_url={"https://cdn1.byjus.com/wp-content/uploads/2018/11/maths/2016/06/07120628/Algebra1.png"}
-                    video_url={"https://robocontest.uz/assets/icons/programming/009-programmer.png"}/>
-                <LessonsCard
-                    image_url={"https://cdn1.byjus.com/wp-content/uploads/2018/11/maths/2016/06/07120628/Algebra1.png"}
-                    video_url={"https://robocontest.uz/assets/icons/programming/009-programmer.png"}/>
-                <LessonsCard
-                    image_url={"https://cdn1.byjus.com/wp-content/uploads/2018/11/maths/2016/06/07120628/Algebra1.png"}
-                    video_url={"https://robocontest.uz/assets/icons/programming/009-programmer.png"}/>
-                <LessonsCard
-                    image_url={"https://cdn1.byjus.com/wp-content/uploads/2018/11/maths/2016/06/07120628/Algebra1.png"}
-                    video_url={"https://robocontest.uz/assets/icons/programming/009-programmer.png"}/>
+                {
+                    lessonsData.map(lesson => (
+                        <LessonsCard
+                            key={lesson.id}
+                            image_url={lesson.cover_image}
+                            video_url={lesson.video_url}/>
+                    ))
+                }
             </div>
         </>
     );

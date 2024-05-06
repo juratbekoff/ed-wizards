@@ -1,4 +1,5 @@
 import {TestimonialsCard} from "../components/cards";
+import {testimonialsData} from "../static";
 
 const Testimonials = () => {
     return (
@@ -11,10 +12,11 @@ const Testimonials = () => {
 
             {/* Testimonials card*/}
             <div className={"grid grid-cols-4 gap-5 max-xl:grid-cols-2 max-lg:gap-3 max-lg:grid-cols-1"}>
-                <TestimonialsCard author={"John Doe"} feedback={"This is very cool and clear channel"}/>
-                <TestimonialsCard author={"John Doe"} feedback={"This is very cool and clear channel"}/>
-                <TestimonialsCard author={"John Doe"} feedback={"This is very cool and clear channel"}/>
-                <TestimonialsCard author={"John Doe"} feedback={"This is very cool and clear channel"}/>
+                {
+                    testimonialsData.map(testimonial => (
+                        <TestimonialsCard key={testimonial.id} author={testimonial.author} feedback={testimonial.text}/>
+                    ))
+                }
             </div>
         </>
     );

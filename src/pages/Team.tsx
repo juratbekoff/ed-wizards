@@ -11,7 +11,7 @@ const Team = () => {
 
             {/* Team card*/}
             <div className={"grid grid-cols-5 gap-5 max-xl:grid-cols-2 max-lg:grid-cols-1"}>
-                <TeamCard fullname={"Juratbek Xudayberganov"}
+                <TeamCard fullname={"Name Surname"}
                           image={"https://upload.wikimedia.org/wikipedia/commons/4/48/Outdoors-man-portrait_%28cropped%29.jpg"}
                           role={"Web developer"}/>
             </div>
