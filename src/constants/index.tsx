@@ -25,4 +25,3 @@ export const navbarItems = [
         name: "Testimonials"
     }
 ]
-
