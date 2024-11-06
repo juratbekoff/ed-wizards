@@ -23,16 +23,5 @@ export const navbarItems = [
         id: 5,
         path: "/testimonials",
         name: "Testimonials"
-    },
-    {
-        id: 6,
-        path: "/about",
-        name: "About us"
-    },
-    {
-        id: 7,
-        path: "/contact",
-        name: "Contact"
     }
 ]
-
