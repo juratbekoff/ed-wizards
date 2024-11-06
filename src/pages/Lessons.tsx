@@ -1,6 +1,3 @@
-import {LessonsCard} from "../components/cards";
-import {lessonsData} from "../static";
-
 const Lessons = () => {
     return (
         <>
@@ -10,17 +7,7 @@ const Lessons = () => {
                 <div className={"bg-[#38B7BC] h-[1px] w-1/6"}></div>
             </div>
 
-            {/* Lessons card*/}
-            <div className={"grid grid-cols-4 gap-5 max-lg:grid-cols-2 max-md:grid-cols-1"}>
-                {
-                    lessonsData.map(lesson => (
-                        <LessonsCard
-                            key={lesson.id}
-                            image_url={lesson.cover_image}
-                            video_url={lesson.video_url}/>
-                    ))
-                }
-            </div>
+            <h1 className={"text-xl font-medium text-center mt-10"}>Here will be a lot of videos that you cannot expect!</h1>
         </>
     );
 };
