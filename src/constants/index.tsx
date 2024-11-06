@@ -24,4 +24,3 @@ export const navbarItems = [
         path: "/testimonials",
         name: "Testimonials"
     }
-]
